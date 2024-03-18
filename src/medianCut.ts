@@ -1,4 +1,3 @@
-import { quickSort } from "./quickSort";
 const enum RGBA {
     R = 0,
     G = 1,
@@ -62,7 +61,7 @@ function getDerivedColor(pixels: number[][]) {
 function sortAndGetPivotIndex(pixels: number[][]) {
     const componentToSortBy = getDifference(pixels);
 
-    quickSort(pixels, (a, b) => a[componentToSortBy] - b[componentToSortBy])
+    pixels.sort((a, b) => a[componentToSortBy] - b[componentToSortBy])
 
     return pixels.length / 2;
 }

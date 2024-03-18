@@ -12,6 +12,8 @@ export function setupFileReader({ onImageRead }: { onImageRead: (event: Progress
       if (!target.files) return
   
       const file = target.files[0]
+
+      if (!file) return
   
       readerInstance.readAsDataURL(file)
     }
